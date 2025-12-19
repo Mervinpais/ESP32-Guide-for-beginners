@@ -10,9 +10,7 @@ This guide is intended to help the user understand how an ESP32 works at a low l
 - Basic knowledge of Git
 - Basic knowledge of Linux and commands (This tutorial is written on a linux based system)
 
-This is v0.0.1d of the documentation, please refer to the github for the latest docs [here](https://github.com/Mervinpais/ESP32-Guide-for-beginners/)
-
----
+## This is v0.0.1e of the documentation, please refer to the github for the latest docs [here](https://github.com/Mervinpais/ESP32-Guide-for-beginners/) (See commits for exact versioning details)
 
 ## Introduction
 
@@ -68,10 +66,58 @@ In short, it’s a tiny chip with massive potential, capable of powering smart h
 
 ### How to's
 
+### Get help on commands
+
+```bash
+idf.py help
+```
+
 ### Create a project
 
-```esp-idf
+```bash
 idf.py create-project PROJECT-NAME
 ```
 
-### Set target
+### Set target for your ESP32 board
+
+```bash
+idf.py set-target ESP32-BOARD
+```
+
+### Get docs (General)
+
+```bash
+idf.py docs
+```
+
+### Project Related actions
+
+- Build the project
+
+```bash
+idf.py build
+```
+
+- Flash the chip
+
+```bash
+idf.py flash
+```
+
+- Monitor Output of the chip
+
+```bash
+idf.py monitor
+```
+
+- All 3 together (Can be done for efficiency/conveinece)
+
+```bash
+idf.py build flash monitor
+```
+
+> [!NOTE] Building as an option is not needed to be specificed and can be ommited with the following command;
+>
+> ```bash
+> idf.py flash monitor
+> ```
